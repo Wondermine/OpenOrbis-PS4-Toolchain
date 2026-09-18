@@ -197,6 +197,7 @@ void sceKernelGetIpcPath();
 int32_t sceKernelGetMainSocId(void);
 // Empty Comment
 int32_t sceKernelGetModuleInfo(OrbisKernelModule handle, OrbisKernelModuleInfo* info);
+int32_t sceKernelGetModuleInfo2(OrbisKernelModule handle, OrbisKernelModuleInfo* info);
 // Empty Comment
 int32_t sceKernelGetModuleInfoForUnwind(void* addr, uint32_t flags, OrbisKernelModuleInfoForUnwind* info);
 // Empty Comment
@@ -205,6 +206,7 @@ int32_t sceKernelGetModuleInfoFromAddr(void* addr, uint32_t flags, OrbisKernelMo
 int32_t sceKernelGetModuleInfoInternal(OrbisKernelModule handle, OrbisKernelModuleInfoEx* info);
 // Empty Comment
 int32_t sceKernelGetModuleList(OrbisKernelModule *array, size_t size, size_t *available);
+int32_t sceKernelGetModuleList2(OrbisKernelModule *array, size_t capacity, size_t *available);
 // Empty Comment
 int32_t sceKernelGetOpenPsIdForSystem(void* ret);
 // Empty Comment
