@@ -327,6 +327,13 @@ int32_t sceKernelMprotect(const void *, size_t, int);
 int32_t sceKernelMsync(void *, size_t, int);
 // Empty Comment
 int32_t sceKernelMtypeprotect(const void *, size_t, int32_t, int);
+int32_t sceKernelMemoryPoolExpand(uint64_t, uint64_t, uint64_t, uint64_t, uint64_t *);
+int32_t sceKernelMemoryPoolReserve(void *, uint64_t, uint64_t, int32_t, void **);
+int32_t sceKernelMemoryPoolCommit(void *, uint64_t, int32_t, int32_t, int32_t);
+int32_t sceKernelMemoryPoolDecommit(void *, uint64_t, int32_t);
+int32_t sceKernelMemoryPoolBatch(const OrbisKernelMemoryPoolBatchEntry *, int32_t,
+                                 int32_t *, int32_t);
+int32_t sceKernelMemoryPoolGetBlockStats(OrbisKernelMemoryPoolBlockStats *, uint64_t);
 // Empty Comment
 void sceKernelMunlock();
 // Empty Comment

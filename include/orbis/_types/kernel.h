@@ -260,6 +260,26 @@ typedef struct {
 } OrbisKernelSwVersion;
 // size = 0x28
 
+typedef struct {
+    uint32_t opcode;
+    uint32_t flags;
+    union {
+        struct { void *addr; uint64_t len; uint8_t prot; uint8_t type; } commit_params;
+        struct { void *addr; uint64_t len; } decommit_params;
+        struct { void *addr; uint64_t len; uint8_t prot; } protect_params;
+        struct { void *addr; uint64_t len; uint8_t prot; uint8_t type; } type_protect_params;
+        struct { void *dest_addr; void *src_addr; uint64_t len; } move_params;
+        uintptr_t padding[3];
+    };
+} OrbisKernelMemoryPoolBatchEntry;
+
+typedef struct {
+    int32_t available_flushed_blocks;
+    int32_t available_cached_blocks;
+    int32_t allocated_flushed_blocks;
+    int32_t allocated_cached_blocks;
+} OrbisKernelMemoryPoolBlockStats;
+
 // Enum Credits - OSM-Made
 enum OrbisNotificationRequestType
 {
