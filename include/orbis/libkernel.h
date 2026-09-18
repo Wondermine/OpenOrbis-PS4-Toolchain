@@ -124,6 +124,8 @@ int32_t sceKernelDirectMemoryQuery(off_t, int32_t, void *, size_t);
 // Empty Comment
 int32_t sceKernelDlsym(int32_t handle, const char *symbol, void **address);
 // Empty Comment
+int32_t sceKernelEnableDmemAliasing(void);
+// Empty Comment
 void sceKernelError();
 // Empty Comment
 void sceKernelEventLogInit();
@@ -191,6 +193,8 @@ void sceKernelGetGPO();
 void sceKernelGetIdPs(void* ret);
 // Empty Comment
 void sceKernelGetIpcPath();
+// Empty Comment
+int32_t sceKernelGetMainSocId(void);
 // Empty Comment
 int32_t sceKernelGetModuleInfo(OrbisKernelModule handle, OrbisKernelModuleInfo* info);
 // Empty Comment
@@ -263,6 +267,8 @@ void sceKernelIccSetCpuInfoBit();
 void sceKernelInternalHeapPrintBacktraceWithModuleInfo();
 // Empty Comment
 void sceKernelInternalMemoryGetModuleSegmentInfo();
+// Empty Comment
+uint32_t sceKernelIsAddressSanitizerEnabled(void);
 // Empty Comment
 int32_t sceKernelIsAuthenticNeo(void);
 // Empty Comment
